@@ -1,24 +1,22 @@
 package com.model.pojo;
 
-import java.io.Serializable;
+import org.springframework.stereotype.Repository;
 
-public class Users implements Serializable {
-    public final static long serialVersionUID = 100L;
-    private Integer userIid;
-    private String userName;
-    private String userPwd;
-    private String userPrio;
-    private String userTele;
-    private Boolean userLock;
+// 用户表pojo
+@Repository
+public class Users {
+    private Integer userId;         // 用户id
+    private String userName;        // 姓名
+    private String pwd;             // 密码
+    private Office office;          // 科室表pojo
+    private Priority priority;      // 权限表pojo
 
-    public Users() {}
-
-    public Integer getUserIid() {
-        return userIid;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUserIid(Integer userIid) {
-        this.userIid = userIid;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getUserName() {
@@ -29,47 +27,38 @@ public class Users implements Serializable {
         this.userName = userName;
     }
 
-    public String getUserPwd() {
-        return userPwd;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
-    public String getUserPrio() {
-        return userPrio;
+    public Office getOffice() {
+        return office;
     }
 
-    public void setUserPrio(String userPrio) {
-        this.userPrio = userPrio;
+    public void setOffice(Office office) {
+        this.office = office;
     }
 
-    public String getUserTele() {
-        return userTele;
+    public Priority getPriority() {
+        return priority;
     }
 
-    public void setUserTele(String userTele) {
-        this.userTele = userTele;
-    }
-
-    public Boolean getUserLock() {
-        return userLock;
-    }
-
-    public void setUserLock(Boolean userLock) {
-        this.userLock = userLock;
+    public void setPriority(Priority priority) {
+        this.priority = priority;
     }
 
     @Override
     public String toString() {
         return "Users{" +
-                "userIid=" + userIid +
+                "userId=" + userId +
                 ", userName='" + userName + '\'' +
-                ", userPwd='" + userPwd + '\'' +
-                ", userPrio='" + userPrio + '\'' +
-                ", userTele='" + userTele + '\'' +
-                ", userLock=" + userLock +
+                ", pwd='" + pwd + '\'' +
+                ", office=" + office +
+                ", priority=" + priority +
                 '}';
     }
 }

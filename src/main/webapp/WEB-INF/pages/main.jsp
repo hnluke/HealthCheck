@@ -244,7 +244,7 @@
                 {"accessPath":"","checked":false,"delFlag":0,"parentID":14,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":25,"resourceName":"卡片管理","resourceOrder":0,"resourceType":""},
                 {"accessPath":"","checked":false,"delFlag":0,"parentID":14,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":26,"resourceName":"卡片管理","resourceOrder":0,"resourceType":""},
                 {"accessPath":"","checked":false,"delFlag":0,"parentID":15,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":27,"resourceName":"辅助功能","resourceOrder":0,"resourceType":""},
-                {"accessPath":"","checked":false,"delFlag":0,"parentID":21,"resourceCode":"","resourceDesc":"","resourceGrade":4,"resourceID":31,"resourceName":"开单","resourceOrder":0,"resourceType":""},
+                {"accessPath":"check/list","checked":false,"delFlag":0,"parentID":21,"resourceCode":"","resourceDesc":"","resourceGrade":4,"resourceID":31,"resourceName":"开单","resourceOrder":0,"resourceType":""},
                 {"accessPath":"","checked":false,"delFlag":0,"parentID":21,"resourceCode":"","resourceDesc":"","resourceGrade":4,"resourceID":32,"resourceName":"打印导检单和条码","resourceOrder":0,"resourceType":""},
                 {"accessPath":"","checked":false,"delFlag":0,"parentID":21,"resourceCode":"","resourceDesc":"","resourceGrade":4,"resourceID":33,"resourceName":"体检报告打印","resourceOrder":0,"resourceType":""},
                 {"accessPath":"","checked":false,"delFlag":0,"parentID":22,"resourceCode":"","resourceDesc":"","resourceGrade":4,"resourceID":34,"resourceName":"体验综合查询","resourceOrder":0,"resourceType":""},
