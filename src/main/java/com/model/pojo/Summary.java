@@ -11,7 +11,8 @@ public class Summary {
     private String sumName;         // 总结表名称
     private Date sumDate;           // 体检日期
     private Person person;          // 体检人pojo
-    private String sumDesc;       // 总结表描述
+    private String sumDesc;         // 总结表描述
+    private String sumGuide;        // 健康指导
 
 
     public Integer getSumId() {
@@ -54,6 +55,16 @@ public class Summary {
         this.sumDesc = sumDesc;
     }
 
+
+
+    public String getSumGuide() {
+        return sumGuide;
+    }
+
+    public void setSumGuide(String sumGuide) {
+        this.sumGuide = sumGuide;
+    }
+
     @Override
     public String toString() {
         return "Summary{" +
@@ -62,6 +73,7 @@ public class Summary {
                 ", sumDate=" + sumDate +
                 ", person=" + person +
                 ", sumDesc='" + sumDesc + '\'' +
+                ", sumGuide='" + sumGuide + '\'' +
                 '}';
     }
 }

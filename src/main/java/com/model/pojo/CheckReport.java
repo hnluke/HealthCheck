@@ -1,19 +1,16 @@
 package com.model.pojo;
 
-import org.springframework.stereotype.Repository;
-
 // 体检报告表pojo
-@Repository
 public class CheckReport {
     private Integer chkId;          // 体检报告id
     private String chkItemName;     // 项目名称
     private String chkSub;          // 子项目名称
     private String chkScope;        // 参考范围
     private String chkUnit;         // 单位
-    private Batches batches;          // 流水表pojo
-    private String chkResult;       // 检查结果
-    private String chkPrompt;       // 提示
-    private String chkSum;          // 小结
+    private Batches batches;        // 流水表pojo
+    private String chk_result;      // 检查结果
+    private String chk_prompt;      // 提示
+    private String chk_sum;         // 小结
 
     public Integer getChkId() {
         return chkId;
@@ -63,28 +60,28 @@ public class CheckReport {
         this.batches = batches;
     }
 
-    public String getChkResult() {
-        return chkResult;
+    public String getChk_result() {
+        return chk_result;
     }
 
-    public void setChkResult(String chkResult) {
-        this.chkResult = chkResult;
+    public void setChk_result(String chk_result) {
+        this.chk_result = chk_result;
     }
 
-    public String getChkPrompt() {
-        return chkPrompt;
+    public String getChk_prompt() {
+        return chk_prompt;
     }
 
-    public void setChkPrompt(String chkPrompt) {
-        this.chkPrompt = chkPrompt;
+    public void setChk_prompt(String chk_prompt) {
+        this.chk_prompt = chk_prompt;
     }
 
-    public String getChkSum() {
-        return chkSum;
+    public String getChk_sum() {
+        return chk_sum;
     }
 
-    public void setChkSum(String chkSum) {
-        this.chkSum = chkSum;
+    public void setChk_sum(String chk_sum) {
+        this.chk_sum = chk_sum;
     }
 
     @Override
@@ -96,9 +93,9 @@ public class CheckReport {
                 ", chkScope='" + chkScope + '\'' +
                 ", chkUnit='" + chkUnit + '\'' +
                 ", batches=" + batches +
-                ", chkResult='" + chkResult + '\'' +
-                ", chkPrompt='" + chkPrompt + '\'' +
-                ", chkSum='" + chkSum + '\'' +
+                ", chk_result='" + chk_result + '\'' +
+                ", chk_prompt='" + chk_prompt + '\'' +
+                ", chk_sum='" + chk_sum + '\'' +
                 '}';
     }
 }
