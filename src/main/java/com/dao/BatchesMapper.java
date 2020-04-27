@@ -14,15 +14,11 @@ public interface BatchesMapper {
     public boolean insertBatches(Batches batches);
 
     /**
-     * 更新流水表
-     * @param ifPay     是否缴费。参考值（"已缴费", "未缴费"）
-     * @param ifComp    是否完成。参考值("已完成", "未完成")
-     * @param id        流水表id
+     * 更新流水表记录
+     * @param batches 流水表对象
      * @return
      */
-    public boolean updateBatches(@Param("ifPay") String ifPay,
-                                 @Param("ifComp") String ifComp,
-                                 @Param("id") Integer id);
+    public boolean updateBatches(Batches batches);
 
     /**
      * 查询流水表
