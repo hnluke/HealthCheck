@@ -8,6 +8,7 @@ public class Association {
     private Integer assoId;         // 套餐id
     private String assoName;        // 套餐名称
     private Asso_Item asso_item;    // 套项表pojo;
+    private Double asso_price;      // 套餐价格
 
     public Integer getAssoId() {
         return assoId;
@@ -31,5 +32,13 @@ public class Association {
 
     public void setAsso_item(Asso_Item asso_item) {
         this.asso_item = asso_item;
+    }
+
+    public Double getAsso_price() {
+        return asso_price;
+    }
+
+    public void setAsso_price(Double asso_price) {
+        this.asso_price = asso_price;
     }
 }

@@ -10,6 +10,7 @@ public class Batches {
     private String batchPay;        // 是否缴费(参考值："已缴费", "未缴费")
     private Person person;          // 体检人表pojo
     private Summary summary;        // 体检总结表pojo
+    private String batchCmp;        // 是否已经完成（参考值："已完成", "未完成"）
 
     public Integer getBatchId() {
         return batchId;
@@ -49,6 +50,14 @@ public class Batches {
 
     public void setSummary(Summary summary) {
         this.summary = summary;
+    }
+
+    public String getBatchCmp() {
+        return batchCmp;
+    }
+
+    public void setBatchCmp(String batchCmp) {
+        this.batchCmp = batchCmp;
     }
 
     @Override

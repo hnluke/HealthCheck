@@ -9,6 +9,8 @@ public class Briefs {
     private Lists lists;            // 开单表pojo
     private String briefDesc;       // 小结描述
     private String briefName;       // 科室名
+    private String briefItem;       // 项目名称
+    private String briefCmp;        // 是否已完成
 
     public String getBriefId() {
         return briefId;
@@ -40,6 +42,22 @@ public class Briefs {
 
     public void setBriefName(String briefName) {
         this.briefName = briefName;
+    }
+
+    public String getBriefItem() {
+        return briefItem;
+    }
+
+    public void setBriefItem(String briefItem) {
+        this.briefItem = briefItem;
+    }
+
+    public String getBriefCmp() {
+        return briefCmp;
+    }
+
+    public void setBriefCmp(String briefCmp) {
+        this.briefCmp = briefCmp;
     }
 
     @Override

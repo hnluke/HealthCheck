@@ -8,6 +8,7 @@ public class Detail {
     private String detItemName;     // 子项目名称
     private String detResult;       // 结果
     private String detPrompt;       // 提示
+    private String detCmp;          // 是否已完成
 
     public Integer getDetId() {
         return detId;
@@ -55,6 +56,14 @@ public class Detail {
 
     public void setDetPrompt(String detPrompt) {
         this.detPrompt = detPrompt;
+    }
+
+    public String getDetCmp() {
+        return detCmp;
+    }
+
+    public void setDetCmp(String detCmp) {
+        this.detCmp = detCmp;
     }
 
     @Override
