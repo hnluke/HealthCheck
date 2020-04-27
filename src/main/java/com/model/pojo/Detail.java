@@ -1,6 +1,9 @@
 package com.model.pojo;
 
+import org.springframework.stereotype.Repository;
+
 // 小结明细表pojo
+@Repository
 public class Detail {
     private Integer detId;          // 小结明细表id
     private Briefs briefs;          // 小结表pojo

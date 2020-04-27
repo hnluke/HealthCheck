@@ -1,6 +1,9 @@
 package com.model.pojo;
 
+import org.springframework.stereotype.Repository;
+
 // 体检报告表pojo
+@Repository
 public class CheckReport {
     private Integer chkId;          // 体检报告id
     private String chkItemName;     // 项目名称

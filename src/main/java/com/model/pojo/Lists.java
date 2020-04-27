@@ -1,8 +1,11 @@
 package com.model.pojo;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.Date;
 
 // 开单表pojo
+@Repository
 public class Lists {
     private Integer listId;         // 开单表id
     private Batches batches;        // 流水表pojo;

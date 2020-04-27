@@ -1,6 +1,9 @@
 package com.model.pojo;
 
+import org.springframework.stereotype.Repository;
+
 // 套项表pojo
+@Repository
 public class Asso_Item {
     private Integer assoId;     // 套餐id
     private Integer itemId;     // 项目id
