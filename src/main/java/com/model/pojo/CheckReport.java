@@ -7,7 +7,10 @@ public class CheckReport {
     private String chkSub;          // 子项目名称
     private String chkScope;        // 参考范围
     private String chkUnit;         // 单位
-    private Batches batches;          // 流水表pojo
+    private Batches batches;        // 流水表pojo
+    private String chk_result;      // 检查结果
+    private String chk_prompt;      // 提示
+    private String chk_sum;         // 小结
 
     public Integer getChkId() {
         return chkId;
@@ -57,6 +60,30 @@ public class CheckReport {
         this.batches = batches;
     }
 
+    public String getChk_result() {
+        return chk_result;
+    }
+
+    public void setChk_result(String chk_result) {
+        this.chk_result = chk_result;
+    }
+
+    public String getChk_prompt() {
+        return chk_prompt;
+    }
+
+    public void setChk_prompt(String chk_prompt) {
+        this.chk_prompt = chk_prompt;
+    }
+
+    public String getChk_sum() {
+        return chk_sum;
+    }
+
+    public void setChk_sum(String chk_sum) {
+        this.chk_sum = chk_sum;
+    }
+
     @Override
     public String toString() {
         return "CheckReport{" +
@@ -66,6 +93,9 @@ public class CheckReport {
                 ", chkScope='" + chkScope + '\'' +
                 ", chkUnit='" + chkUnit + '\'' +
                 ", batches=" + batches +
+                ", chk_result='" + chk_result + '\'' +
+                ", chk_prompt='" + chk_prompt + '\'' +
+                ", chk_sum='" + chk_sum + '\'' +
                 '}';
     }
 }
