@@ -12,20 +12,14 @@ public interface ListsMapper {
      * @param lists 开单表对象
      * @return
      */
-    public boolean insertBatches(Lists lists);
+    public boolean insertLists(Lists lists);
 
     /**
-     *  更新开单表id对应的记录
-     * @param list  是否开单。参考值"已开单"， "未开单"
-     * @param comp  是否已完成体检。参考值"已完成", "未完成"
-     * @param pay   是否已缴费。参考值"已缴费", "未缴费"
-     * @param id   开单表id
+     * 更新开单表
+     * @param lists
      * @return
      */
-    public boolean updateBatches(@Param("list") String list,
-                                 @Param("comp") String comp,
-                                 @Param("pay") String pay,
-                                 @Param("id") Integer id);
+    public boolean updateLists(Lists lists);
 
     /**
      * 删除开单表记录

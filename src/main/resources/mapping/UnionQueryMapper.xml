@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.UnionQueryMapper">
+    <cache/>
+    <!-- 表关联查询多对一，结果映射resultMap方式 -->
+    <resultMap type="" id="unionQuery" autoMapping="true">
+        <id property="" column=""></id>
+        <!--        <result property="name" column="name"></result>-->
+        <association property="" javaType="" autoMapping="true">
+            <id property="" column=""></id>
+        </association>
+
+    </resultMap>
+    <select id="" resultMap="unionQuery">
+        select
+        from
+        inner join
+        on
+        <where>
+            <if test="">
+                and
+            </if>
+        </where>
+    </select>
+
+
+    <!-- 表关联查询一对多，结果映射resultMap方式 -->
+    <resultMap type="" id="unionQuery2" autoMapping="true">
+        <id property="" column="" />
+        <!--        <result property="name" column="name"></result>-->
+
+        <collection property="" javaType="" ofType="" autoMapping="true">
+            <id property="" column="" />
+        </collection>
+
+    </resultMap>
+    <select id="" resultMap="unionQuery2">
+        select
+        from
+        inner join
+        on
+        <where>
+            <if test="">
+                and
+            </if>
+        </where>
+    </select>
+
+    <!-- 表关联查询多对多，结果映射resultMap方式 -->
+    <resultMap type="" id="unionQuery3" autoMapping="true">
+        <id property="" column="" />
+        <!--        <result property="name" column="name"></result>-->
+
+        <collection property="" javaType="" ofType="" autoMapping="true">
+            <id property="" column="" />
+            <association property="">
+                <id column="" property="" />
+            </association>
+        </collection>
+
+    </resultMap>
+    <select id="" resultMap="unionQuery3">
+        select
+        from
+        inner join
+        on
+        <where>
+            <if test="">
+                and
+            </if>
+        </where>
+    </select>
+
+
+
+
+
+</mapper>
