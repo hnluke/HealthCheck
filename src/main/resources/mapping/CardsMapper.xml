@@ -4,7 +4,7 @@
 <mapper namespace="com.dao.CardsMapper">
     <cache/>
     <!-- 查询 -->
-    <select id="queryCards" parameterType="" resultType="">
+    <select id="queryCards" parameterType="" resultType="com.model.pojo.Cards">
 
     </select>
     <!-- 新增 -->

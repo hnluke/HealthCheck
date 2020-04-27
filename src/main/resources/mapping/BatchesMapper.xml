@@ -4,7 +4,7 @@
 <mapper namespace="com.dao.BatchesMapper">
     <cache/>
     <!-- 查询 -->
-    <select id="findBatches" parameterType="" resultType="">
+    <select id="findBatches" parameterType="" resultType="com.model.pojo.Batches">
 
     </select>
     <!-- 新增 -->

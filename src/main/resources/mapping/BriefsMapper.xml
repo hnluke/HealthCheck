@@ -4,7 +4,7 @@
 <mapper namespace="com.dao.BriefsMapper">
     <cache/>
     <!-- 查询 -->
-    <select id="findBriefs" parameterType="" resultType="">
+    <select id="findBriefs" parameterType="" resultType="com.model.pojo.Briefs">
 
     </select>
     <!-- 新增 -->

@@ -4,7 +4,7 @@
 <mapper namespace="com.dao.SummaryMapper">
     <cache/>
     <!-- 查询 -->
-    <select id="querySummary" parameterType="" resultType="">
+    <select id="querySummary" parameterType="" resultType="com.model.pojo.Summary">
 
     </select>
     <!-- 新增 -->
