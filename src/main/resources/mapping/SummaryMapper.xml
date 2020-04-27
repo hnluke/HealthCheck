@@ -4,27 +4,42 @@
 <mapper namespace="com.dao.SummaryMapper">
     <cache/>
     <!-- 查询 -->
-    <select id="querySummary" parameterType="" resultType="com.model.pojo.Summary">
+    <select id="querySummary" parameterType="integer" resultType="com.model.pojo.Summary">
+        select * from summary
+        <where>
+            <if test="sumId != null and sumId != 0">
+                and sum_id = #{sumId}
+            </if>
+        </where>
 
     </select>
     <!-- 新增 -->
-    <insert id="insertSummary" parameterType="" useGeneratedKeys="true" keyColumn="" keyProperty="">
-
+    <insert id="insertSummary" parameterType="com.model.pojo.Summary"
+            useGeneratedKeys="true" keyColumn="sum_id" keyProperty="sumId">
+        insert into summary (sum_name, sum_desc, sum_guide)
+        values (#{sumName}, #{sumDesc}, #{sumGuide})
     </insert>
     <!-- 修改 -->
-    <update id="updateSummay" parameterType="">
-        update
+    <update id="updateSummary" parameterType="com.model.pojo.Summary">
+        update summary
         <set>
-            <if test="">
-
+            <if test="sumName != null and sumName.trim() != ''">
+                sum_name = #{sumName},
+            </if>
+            <if test="sumDesc != null and sumDesc.trim() != ''">
+                sum_desc = #{sumDesc},
+            </if>
+            <if test="sumGuide != null and sumGuide.trim() != ''">
+                sum_guide = #{sumGuide},
             </if>
 
         </set>
-        where
+        where sum_id = #{sumId}
     </update>
     <!-- 删除 -->
-    <delete id="deleteSummay" parameterType="">
-
+    <delete id="deleteSummary" parameterType="integer">
+        delete from summary
+        where sum_id = #{sumId}
     </delete>
 
 </mapper>

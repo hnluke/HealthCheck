@@ -4,23 +4,39 @@
 <mapper namespace="com.dao.DetailMapper">
     <cache/>
     <!-- 查询 -->
-    <select id="queryDetail" parameterType="" resultType="com.model.pojo.Detail">
-
+    <select id="queryDetail" parameterType="integer" resultType="com.model.pojo.Detail">
+        select * from detail
+        <where>
+            <if test="id != null and id != 0">
+                and det_id = #{detId}
+            </if>
+        </where>
     </select>
     <!-- 新增 -->
-    <insert id="insertDetail" parameterType="" useGeneratedKeys="true" keyColumn="" keyProperty="">
-
+    <insert id="insertDetail" parameterType="com.model.pojo.Detail"
+            useGeneratedKeys="true" keyColumn="det_id" keyProperty="detId">
+        insert into detail (det_brief_id, det_item_name)
+        values (#{detBriefId}, #{detItemName})
     </insert>
     <!-- 修改 -->
-    <update id="updateDetail" parameterType="">
-        update
+    <update id="updateDetail" parameterType="com.model.pojo.Detail">
+        update detail
         <set>
-            <if test="">
-
+            <if test="detBriefId != null and detBriefId > 0">
+                det_brief_id = #{detBriefId}
+            </if>
+            <if test="detItemName != null and detItemName.trim() != ''">
+                det_itemName = #{detItemName}
+            </if>
+            <if test="detResult != null and detResult.trim() != ''">
+                det_result = #{detResult}
+            </if>
+            <if test="detCmp != null and detCmp.trim() != ''">
+                det_cmp = #{detCmp}
             </if>
 
         </set>
-        where
+        where det_id = #{detId}
     </update>
 
 </mapper>

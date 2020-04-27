@@ -5,22 +5,48 @@
     <cache/>
     <!-- 查询 -->
     <select id="queryCheckReport" parameterType="" resultType="com.model.pojo.CheckReport">
-
+        select * from check_report
+        <where>
+            <if test="id != null and id != 0">
+                chk_id = #{chkId}
+            </if>
+        </where>
     </select>
     <!-- 新增 -->
-    <insert id="insertCheckReport" parameterType="" useGeneratedKeys="true" keyColumn="" keyProperty="">
-
+    <insert id="insertCheckReport" parameterType="com.model.pojo.CheckReport"
+            useGeneratedKeys="true" keyColumn="chk_id" keyProperty="chkId">
+        insert into check_report (chk_batch_id, chk_itemName, chk_sub, chk_result, chk_prompt, chk_sum, chk_scope, chk_unit)
+        values (#{chkBatchId}, #{chkItemName}, #{chkSub}, #{chkResult}, #{chkPrompt}, #{chkSum}, #{chkScope}, #{chkUnit})
     </insert>
     <!-- 修改 -->
-    <update id="updateCheckReport" parameterType="">
-        update
+    <update id="updateCheckReport" parameterType="com.model.pojo.CheckReport">
+        update check_report
         <set>
-            <if test="">
-
+            <if test="chkItemName != null and chkItemName.trim() != ''">
+                chk_itemName = #{chkItemName},
+            </if>
+            <if test="chkSub != null and chkSub.trim() != ''">
+                chk_sub = #{chkSub},
+            </if>
+            <if test="chkSub != null and chkSub.trim() != ''">
+                chk_sub = #{chkSub},
+            </if>
+            <if test="chkResult != null and chkResult.trim() != ''">
+                chk_result = #{chkResult},
+            </if>
+            <if test="chkPrompt != null and chkPrompt.trim() != ''">
+                chk_prompt = #{chkPrompt},
+            </if>
+            <if test="chkSum != null and chkSum.trim() != ''">
+                chk_sum = #{chkSum},
+            </if>
+            <if test="chkUnit != null and chkUnit.trim() != ''">
+                chk_unit = #{chkUnit},
             </if>
 
+
         </set>
-        where
+        where chk_id = #{chkId}
     </update>
 
 

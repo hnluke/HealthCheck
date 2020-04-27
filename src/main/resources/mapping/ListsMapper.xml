@@ -4,27 +4,42 @@
 <mapper namespace="com.dao.ListsMapper">
     <cache/>
     <!-- 查询 -->
-    <select id="queryLists" parameterType="" resultType="com.model.pojo.Lists">
+    <select id="queryLists" parameterType="integer" resultType="com.model.pojo.Lists">
+        select * from lists
+        <where>
+            <if test="id != null and id != 0">
+                and list_id = #{id}
+            </if>
+        </where>
 
     </select>
     <!-- 新增 -->
-    <insert id="insertLists" parameterType="" useGeneratedKeys="true" keyColumn="" keyProperty="">
+    <insert id="insertLists" parameterType="com.model.pojo.Lists"
+            useGeneratedKeys="true" keyColumn="list_id" keyProperty="listId">
+        insert into Lists (list_per_id, list_name, list_type, list_price)
+        values (#{listPerId}, #{listName}, #{listType}, #{listPrice})
 
     </insert>
     <!-- 修改 -->
-    <update id="updateLists" parameterType="">
-        update
+    <update id="updateLists" parameterType="com.model.pojo.Lists">
+        update lists
         <set>
-            <if test="">
-
+            <if test="listPerId != null and ListPerId != 0">
+                list_per_id = #{listPerId},
             </if>
-
+            <if test="listComp != null and ListComp.trim() != ''">
+                list_comp = #{listComp},
+            </if>
+            <if test="listPay != null and listPay.trim() != ''">
+                list_pay = #{listPay},
+            </if>
         </set>
-        where
+        where list_id = #{listId}
     </update>
     <!-- 删除 -->
     <delete id="deleteLists" parameterType="">
-
+        delete from lists
+        where list_id = {listId}
     </delete>
 
 </mapper>

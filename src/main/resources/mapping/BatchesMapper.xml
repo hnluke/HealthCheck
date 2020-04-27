@@ -4,23 +4,42 @@
 <mapper namespace="com.dao.BatchesMapper">
     <cache/>
     <!-- 查询 -->
-    <select id="findBatches" parameterType="" resultType="com.model.pojo.Batches">
-
+    <select id="findBatches" parameterType="integer" resultType="com.model.pojo.Batches">
+        select * from batches
+        <where>
+            <if test="id != null and id != 0">
+                and batch_id = #{id}
+            </if>
+        </where>
     </select>
     <!-- 新增 -->
-    <insert id="insertBatches" parameterType="" useGeneratedKeys="true" keyColumn="" keyProperty="">
-
+    <insert id="insertBatches" parameterType="com.model.pojo.Batches"
+            useGeneratedKeys="true" keyColumn="batch_id" keyProperty="batchId">
+        insert into batches (batch_no, batch_per_id, batch_sum_id, batch_pay)
+        values (#{batchNo}, #{batchPerId}, #{batchSumId}, #{batchPay})
     </insert>
     <!-- 修改 -->
-    <update id="updateBatches" parameterType="">
-        update
+    <update id="updateBatches" parameterType="com.model.pojo.Batches">
+        update batches
         <set>
-            <if test="">
-
+            <if test="batchNo != null and batchNo.trim() != ''">
+                batch_no = #{batchNo},
+            </if>
+            <if test="batchPay != null and batchPay.trim() != ''">
+                batch_pay = #{batchPay},
+            </if>
+            <if test="batchPerId != null and batchPerId != 0">
+                batch_per_id = #{batchPerId},
+            </if>
+            <if test="batchSumId != null and batchSumId != 0">
+                batch_sum_id = #{batchSumId},
+            </if>
+            <if test="batchCmp != null and batchCmp.trim() != ''">
+                batch_cmp = #{batchCmp},
             </if>
 
         </set>
-        where
+        where batch_id = #{batchId}
     </update>
 
 
