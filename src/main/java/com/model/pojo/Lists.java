@@ -10,7 +10,9 @@ public class Lists {
     private String listComp;        // 是否完成体检(参考值："已完成", "未完成")
     private String listPay;         // 是否已缴费(参考值："已缴费", "未缴费")
     private Date listDate;          // 开单日期
-    private String listItemName;    // 项目名称
+    private String listName;        // 名称
+    private String listType;        // 性质
+    private Double listPrice;       // 价格
 
     public Integer getListId() {
         return listId;
@@ -60,12 +62,28 @@ public class Lists {
         this.listDate = listDate;
     }
 
-    public String getListItemName() {
-        return listItemName;
+    public String getListName() {
+        return listName;
     }
 
-    public void setListItemName(String listItemName) {
-        this.listItemName = listItemName;
+    public void setListName(String listName) {
+        this.listName = listName;
+    }
+
+    public String getListType() {
+        return listType;
+    }
+
+    public void setListType(String listType) {
+        this.listType = listType;
+    }
+
+    public Double getListPrice() {
+        return listPrice;
+    }
+
+    public void setListPrice(Double listPrice) {
+        this.listPrice = listPrice;
     }
 
     @Override
@@ -77,7 +95,9 @@ public class Lists {
                 ", listComp='" + listComp + '\'' +
                 ", listPay='" + listPay + '\'' +
                 ", listDate=" + listDate +
-                ", listItemName='" + listItemName + '\'' +
+                ", listName='" + listName + '\'' +
+                ", listType='" + listType + '\'' +
+                ", listPrice=" + listPrice +
                 '}';
     }
 }
