@@ -30,9 +30,7 @@
             <if test="listComp != null and ListComp.trim() != ''">
                 list_comp = #{listComp},
             </if>
-            <if test="listPay != null and listPay.trim() != ''">
-                list_pay = #{listPay},
-            </if>
+
         </set>
         where list_id = #{listId}
     </update>
