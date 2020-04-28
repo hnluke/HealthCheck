@@ -10,6 +10,7 @@ public class Item {
     private String itemCode;            // 项目编号
     private Double itemPrice;           // 价格
     private Association association;    // 套餐表pojo
+    private ItemType itemType;          // 项目类别
 
     public Integer getItemId() {
         return itemId;
@@ -51,6 +52,14 @@ public class Item {
         this.association = association;
     }
 
+    public ItemType getItemType() {
+        return itemType;
+    }
+
+    public void setItemType(ItemType itemType) {
+        this.itemType = itemType;
+    }
+
     @Override
     public String toString() {
         return "Item{" +
@@ -59,6 +68,7 @@ public class Item {
                 ", itemCode='" + itemCode + '\'' +
                 ", itemPrice=" + itemPrice +
                 ", association=" + association +
+                ", itemType=" + itemType +
                 '}';
     }
 }

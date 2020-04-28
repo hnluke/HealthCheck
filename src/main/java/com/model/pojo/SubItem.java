@@ -10,7 +10,6 @@ public class SubItem {
     private String subCode;        // 子项目编号
     private Double subPrice;       // 价格
     private Item item;              // 项目pojo
-    private ItemType itemType;      // 项目类别pojo
     private String subUnit;         // 单位
     private String subRefer;        // 参考值
     private String subUpper;        // 健康上限值
@@ -58,13 +57,6 @@ public class SubItem {
         this.item = item;
     }
 
-    public ItemType getItemType() {
-        return itemType;
-    }
-
-    public void setItemType(ItemType itemType) {
-        this.itemType = itemType;
-    }
 
     public String getSubUnit() {
         return subUnit;
@@ -106,7 +98,6 @@ public class SubItem {
                 ", subCode='" + subCode + '\'' +
                 ", subPrice=" + subPrice +
                 ", item=" + item +
-                ", itemType=" + itemType +
                 ", subUnit='" + subUnit + '\'' +
                 ", subRefer='" + subRefer + '\'' +
                 ", subUpper='" + subUpper + '\'' +

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 public class Cards {
     private Integer cardId;         // 卡片id
     private String cardNo;          // 卡片编号
+    private Double cardMoney;       // 余额
 
     public Integer getCardId() {
         return cardId;
@@ -24,11 +25,20 @@ public class Cards {
         this.cardNo = cardNo;
     }
 
+    public Double getCardMoney() {
+        return cardMoney;
+    }
+
+    public void setCardMoney(Double cardMoney) {
+        this.cardMoney = cardMoney;
+    }
+
     @Override
     public String toString() {
         return "Cards{" +
                 "cardId=" + cardId +
                 ", cardNo='" + cardNo + '\'' +
+                ", cardMoney=" + cardMoney +
                 '}';
     }
 }

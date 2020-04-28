@@ -12,7 +12,6 @@ public class Person {
     private String perAddr;        // 地址
     private String perBlood;       // 血型
     private String perBorn;        // 出生年月
-    private Double perMoney;       // 账户余额
     private Cards cards;           // 卡片表pojo
 
 
@@ -73,13 +72,6 @@ public class Person {
         this.perBorn = perBorn;
     }
 
-    public Double getPerMoney() {
-        return perMoney;
-    }
-
-    public void setPerMoney(Double perMoney) {
-        this.perMoney = perMoney;
-    }
 
     public Cards getCards() {
         return cards;
@@ -99,7 +91,6 @@ public class Person {
                 ", perAddr='" + perAddr + '\'' +
                 ", perBlood='" + perBlood + '\'' +
                 ", perBorn='" + perBorn + '\'' +
-                ", perMoney=" + perMoney +
                 ", cards=" + cards +
                 '}';
     }
