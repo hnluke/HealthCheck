@@ -1,7 +1,7 @@
 package com.model.pojo;
 
 // 套项表pojo
-public class Asso_Item {
+public class AssoItem {
     private Integer assoId;     // 套餐id
     private Integer itemId;     // 项目id
 

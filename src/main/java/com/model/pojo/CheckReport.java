@@ -10,12 +10,13 @@ public class CheckReport {
     private String chkScope;        // 参考范围
     private String chkUnit;         // 单位
     private Batches batches;        // 流水表pojo
-    private String chk_result;      // 检查结果
-    private String chk_prompt;      // 提示
-    private String chk_sum;         // 小结
-    private String chk_bmp;         // 影像路径
-    private String chk_user;        // 检查医生
-    private Date chk_date;          // 报告日期
+    private String chkResult;      // 检查结果
+    private String chkPrompt;      // 提示
+    private String chkSum;         // 小结
+    private String chkBmp;         // 影像路径
+    private String chkUser;        // 检查医生
+    private Date chkDate;          // 报告日期
+    private Office chkOff;          // 科室pojo
 
     public Integer getChkId() {
         return chkId;
@@ -65,52 +66,60 @@ public class CheckReport {
         this.batches = batches;
     }
 
-    public String getChk_result() {
-        return chk_result;
+    public String getChkResult() {
+        return chkResult;
     }
 
-    public void setChk_result(String chk_result) {
-        this.chk_result = chk_result;
+    public void setChkResult(String chkResult) {
+        this.chkResult = chkResult;
     }
 
-    public String getChk_prompt() {
-        return chk_prompt;
+    public String getChkPrompt() {
+        return chkPrompt;
     }
 
-    public void setChk_prompt(String chk_prompt) {
-        this.chk_prompt = chk_prompt;
+    public void setChkPrompt(String chkPrompt) {
+        this.chkPrompt = chkPrompt;
     }
 
-    public String getChk_sum() {
-        return chk_sum;
+    public String getChkSum() {
+        return chkSum;
     }
 
-    public void setChk_sum(String chk_sum) {
-        this.chk_sum = chk_sum;
+    public void setChkSum(String chkSum) {
+        this.chkSum = chkSum;
     }
 
-    public String getChk_bmp() {
-        return chk_bmp;
+    public String getChkBmp() {
+        return chkBmp;
     }
 
-    public void setChk_bmp(String chk_bmp) {
-        this.chk_bmp = chk_bmp;
+    public void setChkBmp(String chkBmp) {
+        this.chkBmp = chkBmp;
     }
 
-    public String getChk_user() {
-        return chk_user;
+    public String getChkUser() {
+        return chkUser;
     }
 
-    public void setChk_user(String chk_user) {
-        this.chk_user = chk_user;
+    public void setChkUser(String chkUser) {
+        this.chkUser = chkUser;
     }
 
-    public Date getChk_date() {
-        return chk_date;
+    public Date getChkDate() {
+        return chkDate;
     }
 
-    public void setChk_date(Date chk_date) {
-        this.chk_date = chk_date;
+    public void setChkDate(Date chkDate) {
+        this.chkDate = chkDate;
+    }
+
+    public Office getChkOff() {
+        return chkOff;
+    }
+
+    public void setChkOff(Office chkOff) {
+        this.chkOff = chkOff;
     }
 
     @Override
@@ -122,12 +131,13 @@ public class CheckReport {
                 ", chkScope='" + chkScope + '\'' +
                 ", chkUnit='" + chkUnit + '\'' +
                 ", batches=" + batches +
-                ", chk_result='" + chk_result + '\'' +
-                ", chk_prompt='" + chk_prompt + '\'' +
-                ", chk_sum='" + chk_sum + '\'' +
-                ", chk_bmp='" + chk_bmp + '\'' +
-                ", chk_user='" + chk_user + '\'' +
-                ", chk_date=" + chk_date +
+                ", chkResult='" + chkResult + '\'' +
+                ", chkPrompt='" + chkPrompt + '\'' +
+                ", chkSum='" + chkSum + '\'' +
+                ", chkBmp='" + chkBmp + '\'' +
+                ", chkUser='" + chkUser + '\'' +
+                ", chkDate=" + chkDate +
+                ", chkOff=" + chkOff +
                 '}';
     }
 }

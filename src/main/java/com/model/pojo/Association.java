@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 public class Association {
     private Integer assoId;         // 套餐id
     private String assoName;        // 套餐名称
-    private Asso_Item asso_item;    // 套项表pojo;
+    private AssoItem asso_item;    // 套项表pojo;
     private Double asso_price;      // 套餐价格
 
     public Integer getAssoId() {
@@ -26,11 +26,11 @@ public class Association {
         this.assoName = assoName;
     }
 
-    public Asso_Item getAsso_item() {
+    public AssoItem getAsso_item() {
         return asso_item;
     }
 
-    public void setAsso_item(Asso_Item asso_item) {
+    public void setAsso_item(AssoItem asso_item) {
         this.asso_item = asso_item;
     }
 
