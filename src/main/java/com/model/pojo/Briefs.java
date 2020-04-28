@@ -12,6 +12,11 @@ public class Briefs {
     private String briefItemName;       // 项目名称
     private String briefCmp;        // 是否已完成
     private String briefUser;       // 检查医生
+    private String briefPay;        // 是否缴费
+    private String briefBetchNo;    // 流水号
+    private String briefCardNo;     // 卡片编号
+    private String briefPerson;      // 体检人
+
 
     public String getBriefId() {
         return briefId;
@@ -69,6 +74,38 @@ public class Briefs {
         this.briefUser = briefUser;
     }
 
+    public String getBriefPay() {
+        return briefPay;
+    }
+
+    public void setBriefPay(String briefPay) {
+        this.briefPay = briefPay;
+    }
+
+    public String getBriefBetchNo() {
+        return briefBetchNo;
+    }
+
+    public void setBriefBetchNo(String briefBetchNo) {
+        this.briefBetchNo = briefBetchNo;
+    }
+
+    public String getBriefCardNo() {
+        return briefCardNo;
+    }
+
+    public void setBriefCardNo(String briefCardNo) {
+        this.briefCardNo = briefCardNo;
+    }
+
+    public String getBriefPerson() {
+        return briefPerson;
+    }
+
+    public void setBriefPerson(String briefPerson) {
+        this.briefPerson = briefPerson;
+    }
+
     @Override
     public String toString() {
         return "Briefs{" +
@@ -79,6 +116,10 @@ public class Briefs {
                 ", briefItemName='" + briefItemName + '\'' +
                 ", briefCmp='" + briefCmp + '\'' +
                 ", briefUser='" + briefUser + '\'' +
+                ", briefPay='" + briefPay + '\'' +
+                ", briefBetchNo='" + briefBetchNo + '\'' +
+                ", briefCardNo='" + briefCardNo + '\'' +
+                ", briefPerson='" + briefPerson + '\'' +
                 '}';
     }
 }
