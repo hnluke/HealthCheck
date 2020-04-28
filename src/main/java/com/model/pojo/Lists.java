@@ -6,9 +6,6 @@ import java.util.Date;
 public class Lists {
     private Integer listId;         // 开单表id
     private Batches batches;        // 流水表pojo;
-    private String listIf;          // 是否开单 (参考值："已开单", "未开单")
-    private String listComp;        // 是否完成体检(参考值："已完成", "未完成")
-    private Date listDate;          // 开单日期
     private String listName;        // 名称
     private String listType;        // 性质
     private Double listPrice;       // 价格
@@ -29,31 +26,7 @@ public class Lists {
         this.batches = batches;
     }
 
-    public String getListIf() {
-        return listIf;
-    }
 
-    public void setListIf(String listIf) {
-        this.listIf = listIf;
-    }
-
-    public String getListComp() {
-        return listComp;
-    }
-
-    public void setListComp(String listComp) {
-        this.listComp = listComp;
-    }
-
-
-
-    public Date getListDate() {
-        return listDate;
-    }
-
-    public void setListDate(Date listDate) {
-        this.listDate = listDate;
-    }
 
     public String getListName() {
         return listName;
@@ -84,9 +57,6 @@ public class Lists {
         return "Lists{" +
                 "listId=" + listId +
                 ", batches=" + batches +
-                ", listIf='" + listIf + '\'' +
-                ", listComp='" + listComp + '\'' +
-                ", listDate=" + listDate +
                 ", listName='" + listName + '\'' +
                 ", listType='" + listType + '\'' +
                 ", listPrice=" + listPrice +
