@@ -2,6 +2,8 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
+
 @Repository
 // 流水表pojo
 public class Batches {
@@ -11,6 +13,7 @@ public class Batches {
     private Person person;          // 体检人表pojo
     private Summary summary;        // 体检总结表pojo
     private String batchCmp;        // 是否已经完成（参考值："已完成", "未完成"）
+    private Date batchDate;
 
     public Integer getBatchId() {
         return batchId;
@@ -60,6 +63,14 @@ public class Batches {
         this.batchCmp = batchCmp;
     }
 
+    public Date getBatchDate() {
+        return batchDate;
+    }
+
+    public void setBatchDate(Date batchDate) {
+        this.batchDate = batchDate;
+    }
+
     @Override
     public String toString() {
         return "Batches{" +
@@ -68,6 +79,8 @@ public class Batches {
                 ", batchPay='" + batchPay + '\'' +
                 ", person=" + person +
                 ", summary=" + summary +
+                ", batchCmp='" + batchCmp + '\'' +
+                ", batchDate=" + batchDate +
                 '}';
     }
 }
