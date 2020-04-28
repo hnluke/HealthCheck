@@ -1,5 +1,7 @@
 package com.model.pojo;
 
+import java.util.Date;
+
 // 体检报告表pojo
 public class CheckReport {
     private Integer chkId;          // 体检报告id
@@ -13,6 +15,7 @@ public class CheckReport {
     private String chk_sum;         // 小结
     private String chk_bmp;         // 影像路径
     private String chk_user;        // 检查医生
+    private Date chk_date;          // 报告日期
 
     public Integer getChkId() {
         return chkId;
@@ -102,6 +105,14 @@ public class CheckReport {
         this.chk_user = chk_user;
     }
 
+    public Date getChk_date() {
+        return chk_date;
+    }
+
+    public void setChk_date(Date chk_date) {
+        this.chk_date = chk_date;
+    }
+
     @Override
     public String toString() {
         return "CheckReport{" +
@@ -116,6 +127,7 @@ public class CheckReport {
                 ", chk_sum='" + chk_sum + '\'' +
                 ", chk_bmp='" + chk_bmp + '\'' +
                 ", chk_user='" + chk_user + '\'' +
+                ", chk_date=" + chk_date +
                 '}';
     }
 }
