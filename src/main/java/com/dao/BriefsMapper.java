@@ -11,7 +11,8 @@ public interface BriefsMapper {
      * @param briefs 小结表记录对象
      * @return
      */
-    public boolean insertBriefs(Briefs briefs);
+    public boolean insertBriefs(@Param("briefs") Briefs briefs,
+                                @Param("listId") Integer listId);
 
     /**
      * 更新小结表

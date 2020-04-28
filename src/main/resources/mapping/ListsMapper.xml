@@ -16,8 +16,8 @@
     <!-- 新增 -->
     <insert id="insertLists" parameterType="com.model.pojo.Lists"
             useGeneratedKeys="true" keyColumn="list_id" keyProperty="listId">
-        insert into Lists (list_per_id, list_name, list_type, list_price)
-        values (#{listPerId}, #{listName}, #{listType}, #{listPrice})
+        insert into Lists (per_id, list_name, list_type, list_price)
+        values (#{perId}, #{listName}, #{listType}, #{listPrice})
 
     </insert>
     <!-- 修改 -->
@@ -25,7 +25,7 @@
         update lists
         <set>
             <if test="listPerId != null and ListPerId != 0">
-                list_per_id = #{listPerId},
+                per_id = #{perId},
             </if>
             <if test="listComp != null and ListComp.trim() != ''">
                 list_comp = #{listComp},

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 流水表batches数据库操作 -->
 <mapper namespace="com.dao.BatchesMapper">
     <cache/>
     <!-- 查询 -->
@@ -13,10 +14,10 @@
         </where>
     </select>
     <!-- 新增 -->
-    <insert id="insertBatches" parameterType="com.model.pojo.Batches"
+    <insert id="insertBatches" parameterType=""
             useGeneratedKeys="true" keyColumn="batch_id" keyProperty="batchId">
-        insert into batches (batch_no, per_id, sum_id, batch_pay)
-        values (#{batchNo}, #{batchPerId}, #{batchSumId}, #{batchPay})
+        insert into batches (batch_no, per_id, sum_id, batch_pay, batch_cmp)
+        values (#{batchNo}, #{perId}, #{sumumId}, #{batchPay}, #{batchCmp})
     </insert>
     <!-- 修改 -->
     <update id="updateBatches" parameterType="com.model.pojo.Batches">

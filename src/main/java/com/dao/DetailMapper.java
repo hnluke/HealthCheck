@@ -11,7 +11,9 @@ public interface DetailMapper {
      * @param detail 明细表对象
      * @return
      */
-    public boolean insertDetail(Detail detail);
+    public boolean insertDetail(@Param("detail") Detail detail,
+                                @Param("subId") Integer subId,
+                                @Param("briefId") Integer briefId);
 
     /**
      * 更新小结明细表

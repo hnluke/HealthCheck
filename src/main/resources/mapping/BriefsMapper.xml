@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 小结表数据库操作 -->
 <mapper namespace="com.dao.BriefsMapper">
     <cache/>
     <!-- 查询 -->
@@ -13,10 +14,10 @@
         </where>
     </select>
     <!-- 新增 -->
-    <insert id="insertBriefs" parameterType="com.model.pojo.Briefs" useGeneratedKeys="true"
+    <insert id="insertBriefs" parameterType="" useGeneratedKeys="true"
             keyColumn="brief_id" keyProperty="briefId">
         insert into briefs (list_id, brief_name, brief_item)
-        values (#{briefListId}, #{briefName}, #{briefItem})
+        values (#{listId}, #{briefName}, #{briefItem})
 
     </insert>
     <!-- 修改 -->

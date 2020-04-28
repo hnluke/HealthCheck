@@ -1,6 +1,7 @@
 package com.dao;
 
 import com.model.pojo.CheckReport;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +14,8 @@ public interface CheckReportMapper {
      * @param checkReport
      * @return
      */
-    public boolean insertCheckReport(CheckReport checkReport);
+    public boolean insertCheckReport(@Param("checkReport") CheckReport checkReport,
+                                     @Param("batchId") Integer batchId);
 
     /**
      * 更新体检报告
