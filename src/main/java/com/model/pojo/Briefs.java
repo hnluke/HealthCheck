@@ -9,7 +9,7 @@ public class Briefs {
     private Lists lists;            // 开单表pojo
     private String briefDesc;       // 小结描述
     private String briefName;       // 科室名
-    private String briefItem;       // 项目名称
+    private String briefItemName;       // 项目名称
     private String briefCmp;        // 是否已完成
     private String briefUser;       // 检查医生
 
@@ -45,12 +45,12 @@ public class Briefs {
         this.briefName = briefName;
     }
 
-    public String getBriefItem() {
-        return briefItem;
+    public String getBriefItemName() {
+        return briefItemName;
     }
 
-    public void setBriefItem(String briefItem) {
-        this.briefItem = briefItem;
+    public void setBriefItemName(String briefItemName) {
+        this.briefItemName = briefItemName;
     }
 
     public String getBriefCmp() {
@@ -76,7 +76,7 @@ public class Briefs {
                 ", lists=" + lists +
                 ", briefDesc='" + briefDesc + '\'' +
                 ", briefName='" + briefName + '\'' +
-                ", briefItem='" + briefItem + '\'' +
+                ", briefItemName='" + briefItemName + '\'' +
                 ", briefCmp='" + briefCmp + '\'' +
                 ", briefUser='" + briefUser + '\'' +
                 '}';

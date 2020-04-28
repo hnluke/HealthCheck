@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class Item {
     private Integer itemId;             // 项目id
+    private Office office;
     private String itemName;            // 项目名称
     private String itemCode;            // 项目编号
     private Double itemPrice;           // 价格
@@ -60,10 +61,19 @@ public class Item {
         this.itemType = itemType;
     }
 
+    public Office getOffice() {
+        return office;
+    }
+
+    public void setOffice(Office office) {
+        this.office = office;
+    }
+
     @Override
     public String toString() {
         return "Item{" +
                 "itemId=" + itemId +
+                ", office=" + office +
                 ", itemName='" + itemName + '\'' +
                 ", itemCode='" + itemCode + '\'' +
                 ", itemPrice=" + itemPrice +

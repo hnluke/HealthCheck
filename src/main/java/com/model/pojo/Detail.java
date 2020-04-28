@@ -4,7 +4,7 @@ package com.model.pojo;
 public class Detail {
     private Integer detId;          // 小结明细表id
     private Briefs briefs;          // 小结表pojo
-    private SubItem subItem;        // 子项目Item
+    private SubItem subItem;        // 子项目pojo
     private String detItemName;     // 子项目名称
     private String detResult;       // 结果
     private String detPrompt;       // 提示
