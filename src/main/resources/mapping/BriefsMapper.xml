@@ -15,7 +15,7 @@
     <!-- 新增 -->
     <insert id="insertBriefs" parameterType="com.model.pojo.Briefs" useGeneratedKeys="true"
             keyColumn="brief_id" keyProperty="briefId">
-        insert into briefs (brief_list_id, brief_name, brief_item)
+        insert into briefs (list_id, brief_name, brief_item)
         values (#{briefListId}, #{briefName}, #{briefItem})
 
     </insert>

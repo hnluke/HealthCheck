@@ -15,8 +15,10 @@
     <!-- 新增 -->
     <insert id="insertCheckReport" parameterType="com.model.pojo.CheckReport"
             useGeneratedKeys="true" keyColumn="chk_id" keyProperty="chkId">
-        insert into check_report (chk_batch_id, chk_itemName, chk_sub, chk_result, chk_prompt, chk_sum, chk_scope, chk_unit)
-        values (#{chkBatchId}, #{chkItemName}, #{chkSub}, #{chkResult}, #{chkPrompt}, #{chkSum}, #{chkScope}, #{chkUnit})
+        insert into check_report (batch_id, chk_itemName, chk_sub, chk_result, chk_prompt,
+        chk_sum, chk_scope, chk_unit, chk_bmp, chk_user)
+        values (#{chkBatchId}, #{chkItemName}, #{chkSub}, #{chkResult}, #{chkPrompt},
+        #{chkSum}, #{chkScope}, #{chkUnit}, chk_bmp, chk_user)
     </insert>
     <!-- 修改 -->
     <update id="updateCheckReport" parameterType="com.model.pojo.CheckReport">
