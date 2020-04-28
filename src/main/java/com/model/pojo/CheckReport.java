@@ -11,6 +11,8 @@ public class CheckReport {
     private String chk_result;      // 检查结果
     private String chk_prompt;      // 提示
     private String chk_sum;         // 小结
+    private String chk_bmp;         // 影像路径
+    private String chk_user;        // 检查医生
 
     public Integer getChkId() {
         return chkId;
@@ -84,6 +86,22 @@ public class CheckReport {
         this.chk_sum = chk_sum;
     }
 
+    public String getChk_bmp() {
+        return chk_bmp;
+    }
+
+    public void setChk_bmp(String chk_bmp) {
+        this.chk_bmp = chk_bmp;
+    }
+
+    public String getChk_user() {
+        return chk_user;
+    }
+
+    public void setChk_user(String chk_user) {
+        this.chk_user = chk_user;
+    }
+
     @Override
     public String toString() {
         return "CheckReport{" +
@@ -96,6 +114,8 @@ public class CheckReport {
                 ", chk_result='" + chk_result + '\'' +
                 ", chk_prompt='" + chk_prompt + '\'' +
                 ", chk_sum='" + chk_sum + '\'' +
+                ", chk_bmp='" + chk_bmp + '\'' +
+                ", chk_user='" + chk_user + '\'' +
                 '}';
     }
 }

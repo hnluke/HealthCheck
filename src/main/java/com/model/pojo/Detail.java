@@ -9,6 +9,8 @@ public class Detail {
     private String detResult;       // 结果
     private String detPrompt;       // 提示
     private String detCmp;          // 是否已完成
+    private String detBmp;          // 影像路径
+
 
     public Integer getDetId() {
         return detId;
@@ -66,6 +68,14 @@ public class Detail {
         this.detCmp = detCmp;
     }
 
+    public String getDetBmp() {
+        return detBmp;
+    }
+
+    public void setDetBmp(String detBmp) {
+        this.detBmp = detBmp;
+    }
+
     @Override
     public String toString() {
         return "Detail{" +
@@ -75,6 +85,8 @@ public class Detail {
                 ", detItemName='" + detItemName + '\'' +
                 ", detResult='" + detResult + '\'' +
                 ", detPrompt='" + detPrompt + '\'' +
+                ", detCmp='" + detCmp + '\'' +
+                ", detBmp='" + detBmp + '\'' +
                 '}';
     }
 }

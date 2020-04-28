@@ -11,6 +11,7 @@ public class Briefs {
     private String briefName;       // 科室名
     private String briefItem;       // 项目名称
     private String briefCmp;        // 是否已完成
+    private String briefUser;       // 检查医生
 
     public String getBriefId() {
         return briefId;
@@ -60,6 +61,14 @@ public class Briefs {
         this.briefCmp = briefCmp;
     }
 
+    public String getBriefUser() {
+        return briefUser;
+    }
+
+    public void setBriefUser(String briefUser) {
+        this.briefUser = briefUser;
+    }
+
     @Override
     public String toString() {
         return "Briefs{" +
@@ -67,6 +76,9 @@ public class Briefs {
                 ", lists=" + lists +
                 ", briefDesc='" + briefDesc + '\'' +
                 ", briefName='" + briefName + '\'' +
+                ", briefItem='" + briefItem + '\'' +
+                ", briefCmp='" + briefCmp + '\'' +
+                ", briefUser='" + briefUser + '\'' +
                 '}';
     }
 }
