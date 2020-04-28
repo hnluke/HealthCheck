@@ -10,6 +10,10 @@ public class Detail {
     private String detPrompt;       // 提示
     private String detCmp;          // 是否已完成
     private String detBmp;          // 影像路径
+    private String detUnit;         // 单位
+    private String detRefer;        // 参考值
+    private String detUpper;        // 上限值
+    private String detLower;        // 下限值
 
 
     public Integer getDetId() {
@@ -76,6 +80,38 @@ public class Detail {
         this.detBmp = detBmp;
     }
 
+    public String getDetUnit() {
+        return detUnit;
+    }
+
+    public void setDetUnit(String detUnit) {
+        this.detUnit = detUnit;
+    }
+
+    public String getDetRefer() {
+        return detRefer;
+    }
+
+    public void setDetRefer(String detRefer) {
+        this.detRefer = detRefer;
+    }
+
+    public String getDetUpper() {
+        return detUpper;
+    }
+
+    public void setDetUpper(String detUpper) {
+        this.detUpper = detUpper;
+    }
+
+    public String getDetLower() {
+        return detLower;
+    }
+
+    public void setDetLower(String detLower) {
+        this.detLower = detLower;
+    }
+
     @Override
     public String toString() {
         return "Detail{" +
@@ -87,6 +123,10 @@ public class Detail {
                 ", detPrompt='" + detPrompt + '\'' +
                 ", detCmp='" + detCmp + '\'' +
                 ", detBmp='" + detBmp + '\'' +
+                ", detUnit='" + detUnit + '\'' +
+                ", detRefer='" + detRefer + '\'' +
+                ", detUpper='" + detUpper + '\'' +
+                ", detLower='" + detLower + '\'' +
                 '}';
     }
 }
