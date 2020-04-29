@@ -2,9 +2,12 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+
 // 子项目表pojo
 @Repository
-public class SubItem {
+public class SubItem implements Serializable {
+    public final static long serialVersionUID = 115L;
     private Integer subId;         // 子项目id
     private String subName;        // 子项目名称
     private String subCode;        // 子项目编号

@@ -1,7 +1,10 @@
 package com.model.pojo;
 
+import java.io.Serializable;
+
 // 套项表pojo
-public class AssoItem {
+public class AssoItem implements Serializable {
+    public final static long serialVersionUID = 109L;
     private Integer assoId;     // 套餐id
     private Integer itemId;     // 项目id
 

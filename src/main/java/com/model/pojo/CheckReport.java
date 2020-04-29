@@ -1,9 +1,11 @@
 package com.model.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 // 体检报告表pojo
-public class CheckReport {
+public class CheckReport implements Serializable {
+    public final static long serialVersionUID = 113L;
     private Integer chkId;          // 体检报告id
     private String chkItemName;     // 项目名称
     private String chkSub;          // 子项目名称

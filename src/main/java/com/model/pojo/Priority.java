@@ -2,9 +2,12 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+
 // 权限表pojo
 @Repository
-public class Priority {
+public class Priority implements Serializable {
+    public final static long serialVersionUID = 118L;
     private Integer prioId;        // 权限表id
     private String prioName;       // 权限名
 

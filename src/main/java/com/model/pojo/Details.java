@@ -1,7 +1,13 @@
 package com.model.pojo;
 
+import org.springframework.stereotype.Repository;
+
+import java.io.Serializable;
+
 // 小结明细表pojo
-public class Details {
+@Repository
+public class Details implements Serializable {
+    public final static long serialVersionUID = 114L;
     private Integer detId;          // 小结明细表id
     private Briefs briefs;          // 小结表pojo
     private SubItem subItem;        // 子项目pojo

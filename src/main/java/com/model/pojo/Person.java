@@ -2,9 +2,12 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+
 // 体检人表pojo
 @Repository
-public class Person {
+public class Person implements Serializable {
+    public final static long serialVersionUID = 1002L;
     private Integer perId;         // 体检人id
     private String perName;        // 姓名
     private String perTele;        // 手机
@@ -13,6 +16,7 @@ public class Person {
     private String perBlood;       // 血型
     private String perBorn;        // 出生年月
     private Cards cards;           // 卡片表pojo
+    private Integer cardId;         // 关联对象Card的id
 
 
 
@@ -79,6 +83,14 @@ public class Person {
 
     public void setCards(Cards cards) {
         this.cards = cards;
+    }
+
+    public Integer getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(Integer cardId) {
+        this.cardId = cardId;
     }
 
     @Override
