@@ -14,7 +14,7 @@
         </where>
     </select>
     <!-- 新增 -->
-    <insert id="insertBriefs" parameterType="" useGeneratedKeys="true"
+    <insert id="insertBriefs" parameterType="com.model.pojo.Briefs" useGeneratedKeys="true"
             keyColumn="brief_id" keyProperty="briefId">
         insert into briefs (list_id, brief_name, brief_item)
         values (#{listId}, #{briefName}, #{briefItem})

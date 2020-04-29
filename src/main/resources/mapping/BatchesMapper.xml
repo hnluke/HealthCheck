@@ -14,7 +14,7 @@
         </where>
     </select>
     <!-- 新增 -->
-    <insert id="insertBatches" parameterType=""
+    <insert id="insertBatches" parameterType="com.model.pojo.Batches"
             useGeneratedKeys="true" keyColumn="batch_id" keyProperty="batchId">
         insert into batches (batch_no, per_id, sum_id, batch_pay, batch_cmp)
         values (#{batchNo}, #{perId}, #{sumumId}, #{batchPay}, #{batchCmp})

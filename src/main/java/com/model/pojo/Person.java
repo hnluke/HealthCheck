@@ -2,9 +2,12 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+
 // 体检人表pojo
 @Repository
-public class Person {
+public class Person implements Serializable {
+    public final static long serialVersionUID = 1002L;
     private Integer perId;         // 体检人id
     private String perName;        // 姓名
     private String perTele;        // 手机

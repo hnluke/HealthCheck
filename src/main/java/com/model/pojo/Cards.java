@@ -2,9 +2,12 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+
 // 卡片表pojo
 @Repository
-public class Cards {
+public class Cards implements Serializable {
+    public final static long serialVersionUID = 1001L;
     private Integer cardId;         // 卡片id
     private String cardNo;          // 卡片编号
     private Double cardMoney;       // 余额

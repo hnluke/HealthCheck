@@ -1,30 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="">
+<mapper namespace="com.dao.UnionQueryMapper">
     <cache/>
-    <!-- 查询 -->
-    <select id="" parameterType="" resultType="">
+    <!-- 卡片表与体检人表关联查询 -->
+    <!-- 表关联查询多对一，结果映射resultMap方式 -->
+    <resultMap type="com.model.pojo.Cards" id="cards_person" autoMapping="true">
+        <id property="cardId" column="card_id"></id>
+        <!--        <result property="name" column="name"></result>-->
+        <association property="person" javaType="com.model.pojo.Person" autoMapping="true">
+            <id property="perId" column="per_id"></id>
+        </association>
 
+    </resultMap>
+    <select id="queryCardsPerson" resultMap="cards_person" parameterType="string">
+        select A.*, B.*
+        from cards A
+        inner join person B
+        on A.card_id = B.card_id
+<!--        <where>-->
+<!--            <if test="cardNos != null and cardNos.trim() != ''">-->
+<!--                and card_no = #{cardNos}-->
+<!--            </if>-->
+<!--        </where>-->
     </select>
-    <!-- 新增 -->
-    <insert id="" parameterType="" useGeneratedKeys="true" keyColumn="" keyProperty="">
 
-    </insert>
-    <!-- 修改 -->
-    <update id="" parameterType="">
-        update
-        <set>
-            <if test="">
 
-            </if>
+<!--    &lt;!&ndash; 表关联查询一对多，结果映射resultMap方式 &ndash;&gt;-->
+<!--    <resultMap type="" id="unionQuery2" autoMapping="true">-->
+<!--        <id property="" column="" />-->
+<!--        &lt;!&ndash;        <result property="name" column="name"></result>&ndash;&gt;-->
 
-        </set>
-        where
-    </update>
-    <!-- 删除 -->
-    <delete id="" parameterType="">
+<!--        <collection property="" javaType="" ofType="" autoMapping="true">-->
+<!--            <id property="" column="" />-->
+<!--        </collection>-->
 
-    </delete>
+<!--    </resultMap>-->
+<!--    <select id="" resultMap="unionQuery2">-->
+<!--        select-->
+<!--        from-->
+<!--        inner join-->
+<!--        on-->
+<!--        <where>-->
+<!--            <if test="">-->
+<!--                and-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash; 表关联查询多对多，结果映射resultMap方式 &ndash;&gt;-->
+<!--    <resultMap type="" id="unionQuery3" autoMapping="true">-->
+<!--        <id property="" column="" />-->
+<!--        &lt;!&ndash;        <result property="name" column="name"></result>&ndash;&gt;-->
+
+<!--        <collection property="" javaType="" ofType="" autoMapping="true">-->
+<!--            <id property="" column="" />-->
+<!--            <association property="">-->
+<!--                <id column="" property="" />-->
+<!--            </association>-->
+<!--        </collection>-->
+
+<!--    </resultMap>-->
+<!--    <select id="" resultMap="unionQuery3">-->
+<!--        select-->
+<!--        from-->
+<!--        inner join-->
+<!--        on-->
+<!--        <where>-->
+<!--            <if test="">-->
+<!--                and-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
+
+
+
 
 </mapper>

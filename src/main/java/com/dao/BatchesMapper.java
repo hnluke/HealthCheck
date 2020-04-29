@@ -11,9 +11,7 @@ public interface BatchesMapper {
      * @param batches 流水表对象
      * @return
      */
-    public boolean insertBatches(@Param("batches") Batches batches,
-                                 @Param("sumIid") Integer sumId,
-                                 @Param("perId") Integer perId);
+    public boolean insertBatches(Batches batches);
 
     /**
      * 更新流水表记录

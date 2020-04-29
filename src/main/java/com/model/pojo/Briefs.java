@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 public class Briefs {
     private String briefId;         // 小结表id
     private Lists lists;            // 开单表pojo
+    private Integer listId;         // 关联lists外键
     private String briefDesc;       // 小结描述
     private String briefName;       // 科室名
     private String briefItemName;       // 项目名称
@@ -24,6 +25,14 @@ public class Briefs {
 
     public void setBriefId(String briefId) {
         this.briefId = briefId;
+    }
+
+    public Integer getListId() {
+        return listId;
+    }
+
+    public void setListId(Integer listId) {
+        this.listId = listId;
     }
 
     public Lists getLists() {

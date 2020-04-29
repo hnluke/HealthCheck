@@ -11,6 +11,7 @@ public class Batches {
     private String batchNo;         // 流水号
     private String batchPay;        // 是否缴费(参考值："已缴费", "未缴费")
     private Person person;          // 体检人表pojo
+    private Integer perId;          // 外键(关系表person的id)
     private Summary summary;        // 体检总结表pojo
     private String batchCmp;        // 是否已经完成（参考值："已完成", "未完成"）
     private Date batchDate;
@@ -69,6 +70,14 @@ public class Batches {
 
     public void setBatchDate(Date batchDate) {
         this.batchDate = batchDate;
+    }
+
+    public Integer getPerId() {
+        return perId;
+    }
+
+    public void setPerId(Integer perId) {
+        this.perId = perId;
     }
 
     @Override
