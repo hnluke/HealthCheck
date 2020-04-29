@@ -2,16 +2,21 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+import java.util.List;
+
 // 项目表pojo
 @Repository
-public class Item {
+public class Item implements Serializable {
+    public final static long serialVersionUID = 106L;
     private Integer itemId;             // 项目id
-    private Office office;
+    private Office office;              // 科室表pojo
     private String itemName;            // 项目名称
     private String itemCode;            // 项目编号
     private Double itemPrice;           // 价格
-    private Association association;    // 套餐表pojo
-    private ItemType itemType;          // 项目类别
+    //private Association association;    // 套餐表pojo
+    private List<Association> listAsso;   // 套餐表pojo
+    private ItemType itemType;          // 项目类别pojo
 
     public Integer getItemId() {
         return itemId;
@@ -45,12 +50,12 @@ public class Item {
         this.itemPrice = itemPrice;
     }
 
-    public Association getAssociation() {
-        return association;
+    public List<Association> getListAsso() {
+        return listAsso;
     }
 
-    public void setAssociation(Association association) {
-        this.association = association;
+    public void setListAsso(List<Association> listAsso) {
+        this.listAsso = listAsso;
     }
 
     public ItemType getItemType() {
@@ -77,7 +82,7 @@ public class Item {
                 ", itemName='" + itemName + '\'' +
                 ", itemCode='" + itemCode + '\'' +
                 ", itemPrice=" + itemPrice +
-                ", association=" + association +
+                ", listAsso=" + listAsso +
                 ", itemType=" + itemType +
                 '}';
     }

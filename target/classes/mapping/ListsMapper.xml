@@ -13,13 +13,13 @@
 <!--        </where>-->
 
 <!--    </select>-->
-<!--    &lt;!&ndash; 新增 &ndash;&gt;-->
-<!--    <insert id="insertLists" parameterType="com.model.pojo.Lists"-->
-<!--            useGeneratedKeys="true" keyColumn="list_id" keyProperty="listId">-->
-<!--        insert into Lists (per_id, list_name, list_type, list_price)-->
-<!--        values (#{perId}, #{listName}, #{listType}, #{listPrice})-->
+    <!-- 新增 -->
+    <insert id="insertLists" parameterType="com.model.pojo.Lists"
+            useGeneratedKeys="true" keyColumn="list_id" keyProperty="listId">
+        insert into Lists (batch_id, list_name, list_type, list_price)
+        values (#{batchId}, #{listName}, #{listType}, #{listPrice})
 
-<!--    </insert>-->
+    </insert>
 <!--    &lt;!&ndash; 修改 &ndash;&gt;-->
 <!--    <update id="updateLists" parameterType="com.model.pojo.Lists">-->
 <!--        update lists-->

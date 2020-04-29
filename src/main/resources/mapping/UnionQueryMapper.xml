@@ -14,15 +14,15 @@
 
     </resultMap>
     <select id="queryCardsPerson" resultMap="cards_person" parameterType="string">
-        select A.*, B.*
+        select A.card_id, A.card_money, A.card_no, B.*
         from cards A
         inner join person B
         on A.card_id = B.card_id
-<!--        <where>-->
-<!--            <if test="cardNos != null and cardNos.trim() != ''">-->
-<!--                and card_no = #{cardNos}-->
-<!--            </if>-->
-<!--        </where>-->
+        <where>
+            <if test="cardNos != null and cardNos.trim() != ''">
+                and A.card_no = #{cardNos}
+            </if>
+        </where>
     </select>
 
 
@@ -48,30 +48,41 @@
 <!--        </where>-->
 <!--    </select>-->
 
-<!--    &lt;!&ndash; 表关联查询多对多，结果映射resultMap方式 &ndash;&gt;-->
-<!--    <resultMap type="" id="unionQuery3" autoMapping="true">-->
-<!--        <id property="" column="" />-->
-<!--        &lt;!&ndash;        <result property="name" column="name"></result>&ndash;&gt;-->
+    <!-- 表关联查询多对多，结果映射resultMap方式 -->
+    <resultMap type="com.model.pojo.Item" id="asso_item_type_off" autoMapping="true">
+        <id property="itemId" column="item_id" />
+        <!--        <result property="name" column="name"></result>-->
+        <association property="office" javaType="com.model.pojo.Office" autoMapping="true">
+            <id column="off_id" property="offId"/>
+        </association>
+        <association property="itemType" javaType="com.model.pojo.ItemType" autoMapping="true">
+            <id column="type_id" property="typeId" />
+        </association>
 
-<!--        <collection property="" javaType="" ofType="" autoMapping="true">-->
-<!--            <id property="" column="" />-->
-<!--            <association property="">-->
-<!--                <id column="" property="" />-->
-<!--            </association>-->
-<!--        </collection>-->
+        <collection property="listAsso" javaType="java.util.List" ofType="com.model.pojo.Association" autoMapping="true">
+            <id property="assoId" column="asso_id" />
+            <association property="assoItem" javaType="com.model.pojo.AssoItem" autoMapping="true">
+                <id column="asso_id" property="assoId" />
+            </association>
+        </collection>
 
-<!--    </resultMap>-->
-<!--    <select id="" resultMap="unionQuery3">-->
-<!--        select-->
-<!--        from-->
-<!--        inner join-->
-<!--        on-->
-<!--        <where>-->
-<!--            <if test="">-->
-<!--                and-->
-<!--            </if>-->
-<!--        </where>-->
-<!--    </select>-->
+    </resultMap>
+    <select id="queryAssoItemTypeOff" resultMap="asso_item_type_off" parameterType="string">
+        select A.item_name, E.asso_name, B.type_name, C.off_name
+        from item A
+        left JOIN item_type B on A.item_type_id = B.type_id
+        left JOIN office C on A.off_id = C.off_id
+        LEFT JOIN asso_item D on A.item_id = D.item_id
+        LEFT JOIN association E on E.asso_id = D.asso_id
+        <where>
+            <if test="itemName != null and itemName.trim() != ''">
+                and A.item_name = #{itemName}
+            </if>
+            <if test="assoName != null and assoName.trim() != ''">
+                and D.asso_name = #{assoName}
+            </if>
+        </where>
+    </select>
 
 
 

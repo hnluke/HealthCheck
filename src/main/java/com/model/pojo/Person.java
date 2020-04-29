@@ -16,6 +16,7 @@ public class Person implements Serializable {
     private String perBlood;       // 血型
     private String perBorn;        // 出生年月
     private Cards cards;           // 卡片表pojo
+    private Integer cardId;         // 关联对象Card的id
 
 
 
@@ -82,6 +83,14 @@ public class Person implements Serializable {
 
     public void setCards(Cards cards) {
         this.cards = cards;
+    }
+
+    public Integer getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(Integer cardId) {
+        this.cardId = cardId;
     }
 
     @Override

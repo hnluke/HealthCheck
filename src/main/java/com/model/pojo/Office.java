@@ -2,9 +2,12 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+
 // 科室表pojo
 @Repository
-public class Office {
+public class Office implements Serializable {
+    public final static long serialVersionUID = 115L;
     private Integer offId;      // 科室表id
     private String offName;     // 科室名称
 

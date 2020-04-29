@@ -12,6 +12,7 @@ public class Cards implements Serializable {
     private String cardNo;          // 卡片编号
     private Double cardMoney;       // 余额
     private Person person;          // 体检人pojo
+    private Integer perId;          // 关系表perId的id
 
     public Integer getCardId() {
         return cardId;
@@ -43,6 +44,14 @@ public class Cards implements Serializable {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+
+    public Integer getPerId() {
+        return perId;
+    }
+
+    public void setPerId(Integer perId) {
+        this.perId = perId;
     }
 
     @Override

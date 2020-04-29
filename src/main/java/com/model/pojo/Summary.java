@@ -2,11 +2,13 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
 import java.util.Date;
 
 // 体检总结表pojo
 @Repository
-public class Summary {
+public class Summary implements Serializable {
+    public final static long serialVersionUID = 120L;
     private Integer sumId;          // 总结表id
     private String sumName;         // 总结表名称
     private Date sumDate;           // 体检日期

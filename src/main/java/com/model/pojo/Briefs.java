@@ -2,21 +2,26 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+
 @Repository
 // 小结表pojo
-public class Briefs {
+public class Briefs implements Serializable {
+    public final static long serialVersionUID = 112L;
     private String briefId;         // 小结表id
     private Lists lists;            // 开单表pojo
     private Integer listId;         // 关联lists外键
     private String briefDesc;       // 小结描述
     private String briefName;       // 科室名
     private String briefItemName;       // 项目名称
-    private String briefCmp;        // 是否已完成
+    private String briefType;
+    private String briefComp;        // 是否已完成
     private String briefUser;       // 检查医生
     private String briefPay;        // 是否缴费
-    private String briefBetchNo;    // 流水号
+    private String briefBatchNo;    // 流水号
     private String briefCardNo;     // 卡片编号
     private String briefPerson;      // 体检人
+
 
 
     public String getBriefId() {
@@ -67,12 +72,20 @@ public class Briefs {
         this.briefItemName = briefItemName;
     }
 
-    public String getBriefCmp() {
-        return briefCmp;
+    public String getBriefType() {
+        return briefType;
     }
 
-    public void setBriefCmp(String briefCmp) {
-        this.briefCmp = briefCmp;
+    public void setBriefType(String briefType) {
+        this.briefType = briefType;
+    }
+
+    public String getBriefComp() {
+        return briefComp;
+    }
+
+    public void setBriefComp(String briefComp) {
+        this.briefComp = briefComp;
     }
 
     public String getBriefUser() {
@@ -91,12 +104,12 @@ public class Briefs {
         this.briefPay = briefPay;
     }
 
-    public String getBriefBetchNo() {
-        return briefBetchNo;
+    public String getBriefBatchNo() {
+        return briefBatchNo;
     }
 
-    public void setBriefBetchNo(String briefBetchNo) {
-        this.briefBetchNo = briefBetchNo;
+    public void setBriefBatchNo(String briefBatchNo) {
+        this.briefBatchNo = briefBatchNo;
     }
 
     public String getBriefCardNo() {
@@ -120,13 +133,15 @@ public class Briefs {
         return "Briefs{" +
                 "briefId='" + briefId + '\'' +
                 ", lists=" + lists +
+                ", listId=" + listId +
                 ", briefDesc='" + briefDesc + '\'' +
                 ", briefName='" + briefName + '\'' +
                 ", briefItemName='" + briefItemName + '\'' +
-                ", briefCmp='" + briefCmp + '\'' +
+                ", briefType='" + briefType + '\'' +
+                ", briefComp='" + briefComp + '\'' +
                 ", briefUser='" + briefUser + '\'' +
                 ", briefPay='" + briefPay + '\'' +
-                ", briefBetchNo='" + briefBetchNo + '\'' +
+                ", briefBatchNo='" + briefBatchNo + '\'' +
                 ", briefCardNo='" + briefCardNo + '\'' +
                 ", briefPerson='" + briefPerson + '\'' +
                 '}';

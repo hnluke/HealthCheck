@@ -1,11 +1,17 @@
 package com.model.pojo;
 
+import org.springframework.stereotype.Repository;
+
+import java.io.Serializable;
 import java.util.Date;
 
 // 开单表pojo
-public class Lists {
+@Repository
+public class Lists implements Serializable {
+    public final static long serialVersionUID = 115L;
     private Integer listId;         // 开单表id
     private Batches batches;        // 流水表pojo;
+    private Integer batchId;        // 关联表id
     private String listName;        // 名称
     private String listType;        // 性质
     private Double listPrice;       // 价格
@@ -52,11 +58,20 @@ public class Lists {
         this.listPrice = listPrice;
     }
 
+    public Integer getBatchId() {
+        return batchId;
+    }
+
+    public void setBatchId(Integer batchId) {
+        this.batchId = batchId;
+    }
+
     @Override
     public String toString() {
         return "Lists{" +
                 "listId=" + listId +
                 ", batches=" + batches +
+                ", batchId=" + batchId +
                 ", listName='" + listName + '\'' +
                 ", listType='" + listType + '\'' +
                 ", listPrice=" + listPrice +

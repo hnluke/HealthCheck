@@ -2,9 +2,12 @@ package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+
 // 套餐表pojo
 @Repository
-public class Association {
+public class Association implements Serializable {
+    public final static long serialVersionUID = 110L;
     private Integer assoId;         // 套餐id
     private String assoName;        // 套餐名称
     private AssoItem assoItem;    // 套项表pojo;

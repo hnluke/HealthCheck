@@ -7,12 +7,12 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface ListsMapper {
-//    /**
-//     *  向开单表插入数据
-//     * @param lists 开单表对象
-//     * @return
-//     */
-//    public boolean insertLists(Lists lists);
+    /**
+     *  向开单表插入数据
+     * @param lists 开单表对象
+     * @return
+     */
+    public boolean insertLists(Lists lists);
 //
 //    /**
 //     * 更新开单表

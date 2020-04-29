@@ -1,9 +1,13 @@
 package com.model.pojo;
 
 import org.springframework.stereotype.Repository;
+
+import java.io.Serializable;
+
 // 菜单表pojo
 @Repository
-public class Menus {
+public class Menus implements Serializable {
+    public final static long serialVersionUID = 117L;
     private Integer menuId;         // 菜单id
     private String menuName;        // 菜单名
     private Priority priority;      // 权限表pojo
