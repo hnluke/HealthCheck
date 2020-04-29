@@ -1,7 +1,7 @@
 package com.model.pojo;
 
 // 小结明细表pojo
-public class Detail {
+public class Details {
     private Integer detId;          // 小结明细表id
     private Briefs briefs;          // 小结表pojo
     private SubItem subItem;        // 子项目pojo

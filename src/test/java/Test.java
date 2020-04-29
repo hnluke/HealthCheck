@@ -1,3 +1,4 @@
+import com.model.pojo.Details;
 import java.util.ArrayList;
 
 public class Test {
@@ -14,6 +15,8 @@ public class Test {
         list2.add("s");
         System.out.print(list1.retainAll(list2));
         System.out.println(list1.size());
+
+
 
 
     }
