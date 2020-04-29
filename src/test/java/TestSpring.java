@@ -48,7 +48,6 @@ public class TestSpring {
 //        batches.setBatchCmp("未完成");
 //        batchesMapper.insertBatches(batches);
 //        associationMapper.findAssociation("");
-//        itemMapper.findItem("");
         List<String> list = new ArrayList<String>();
         list.add("a");
         checkStationService.createList("1001", list);
